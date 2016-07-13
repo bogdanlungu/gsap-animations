@@ -1,0 +1,10 @@
+.container{
+  width: 100%;
+  height: 210px;
+}
+
+.atom{
+  width: 200px;
+  height: 200px;
+  position: absolute;
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>GSAP animations</title>
+    <link rel="stylesheet" href="css/styles.css" media="screen" charset="utf-8">
+</head>
+
+<body>
+    <!-- Content -->
+    <h1>GSAP animations</h1>
+    <div class="container">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="-52 -53 100 100" stroke-width="2" class="atom">
+       <g fill="none">
+        <ellipse stroke="#66899a" rx="6" ry="44"/>
+        <ellipse stroke="#e1d85d" rx="6" ry="44" transform="rotate(-66)"/>
+        <ellipse stroke="#80a3cf" rx="6" ry="44" transform="rotate(66)"/>
+        <circle  stroke="#4b541f" r="44" class="circleInside"/>
+       </g>
+       <g fill="#66899a" stroke="white">
+        <circle fill="#80a3cf" r="13"/>
+        <circle cy="-44" r="9"/>
+        <circle cx="-40" cy="18" r="9"/>
+        <circle cx="40" cy="18" r="9"/>
+       </g>
+      </svg>
+    </div>
+    <button class="animate">Move right and rotate</button>
+
+    <!-- JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/TweenMax.min.js" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js" charset="utf-8"></script>
+    <script src="dist/app.js"></script>
+</body>
+
+</html>
