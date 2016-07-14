@@ -1,28 +1,29 @@
 {
-  "name": "gsap-animations",
-  "version": "1.1.0",
-  "description": "GSAP animations",
-  "main": "gulpfile.js",
-  "scripts": {
-    "start": "gulp"
-  },
-  "repository": {
-    "type": "git",
-    "url": ""
-  },
-  "keywords": [
-    "javascript",
-    "css",
-    "html",
-    "animations",
-    "gulp"
-  ],
-  "author": "Bogdan Lungu",
-  "license": "MIT",
-  "devDependencies": {
-    "browserify": "^13.0.1",
-    "gulp": "^3.9.1",
-    "babelify": "^7.3.0",
-    "vinyl-source-stream": "^1.1.0"
-  }
+    "name": "gsap-animations",
+    "version": "1.1.0",
+    "description": "GSAP animations",
+    "main": "gulpfile.js",
+    "scripts": {
+        "start": "gulp"
+    },
+    "repository": {
+        "type": "git",
+        "url": ""
+    },
+    "keywords": [
+        "javascript",
+        "css",
+        "html",
+        "animations",
+        "gulp"
+    ],
+    "author": "Bogdan Lungu",
+    "license": "MIT",
+    "devDependencies": {
+        "browser-sync": "^2.13.0",
+        "browserify": "^13.0.1",
+        "gulp": "^3.9.1",
+        "babelify": "^7.3.0",
+        "vinyl-source-stream": "^1.1.0"
+    }
 }

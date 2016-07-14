@@ -2,16 +2,23 @@ var gulp = require("gulp");
 var babelify = require('babelify');
 var browserify = require('browserify');
 var source = require('vinyl-source-stream');
+var browserSync = require('browser-sync').create();
 
-gulp.task("babeljs", function () {
-	browserify({
-	    entries: 'js/app.js',
-	    debug: true
-	})
-	.transform("babelify", {presets: ["es2015"]})
-	.bundle()
-	.pipe(source('app.js'))
-	.pipe(gulp.dest('./dist'));
+browserSync.init({
+    server: './'
+});
+
+gulp.task("babeljs", function() {
+    browserify({
+            entries: 'js/app.js',
+            debug: true
+        })
+        .transform("babelify", {
+            presets: ["es2015"]
+        })
+        .bundle()
+        .pipe(source('app.js'))
+        .pipe(gulp.dest('./dist'));
 });
 
 gulp.task('default', ['babeljs', 'watch'], function() {
@@ -19,5 +26,5 @@ gulp.task('default', ['babeljs', 'watch'], function() {
 });
 
 gulp.task('watch', function() {
-    gulp.watch(['js/*.js', './*.html'], ['default']);
+    gulp.watch(['js/*.js', './*.html'], ['default']).on('change', browserSync.reload);
 });
